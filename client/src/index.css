@@ -1,0 +1,169 @@
+* {
+  font-family: sans-serif;
+}
+
+.login-container {
+  display: flex;
+  padding: 35px;
+  width: 85%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 100px;
+  margin-left: 200px;
+}
+
+.form-container {
+  border: 1px solid lightgray;
+  padding: 35px;
+  width: 350px;
+  height: 325px;
+  margin: auto;
+  border-radius: 12px;
+}
+
+.login-title {
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.login-btn {
+  width: 280px;
+  /* background: #536dfe; */
+}
+
+.create-account {
+  text-align: center;
+  text-decoration: underline;
+  color: green;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.login-image {
+  width: 85%;
+}
+
+.register-btn {
+  width: 100px;
+}
+
+.navbar {
+  padding: 12px;
+  background: #0c9e38;
+}
+
+.navbar-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-container {
+  height: 400px;
+  width: 90%;
+  margin: auto;
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+  height: 350px;
+  box-shadow: 1px 1px 10px lightgray;
+}
+
+.card-img {
+  width: 225px;
+  height: 225px;
+  object-fit: contain;
+  margin: auto;
+}
+
+.card:hover {
+  transition: all 0.5s ease;
+  transform: translateY(-10px);
+  box-shadow: 1px 1px 15px gray;
+}
+
+.card-btn {
+  background: #0c9e38;
+  border: none;
+}
+
+.card-btn:hover {
+  background: #0c9e38;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 45px;
+}
+
+.view-all-results-container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  padding: 10px;
+}
+
+.all-questions-title {
+  margin-left: 100px;
+  position: relative;
+  top: 25px;
+  font-weight: bold;
+}
+
+.view-questions-table {
+  width: 85%;
+  margin: auto;
+  margin-top: 35px;
+}
+
+.table-header > tr > th {
+  background: #212529;
+  text-align: center;
+  color: white;
+}
+
+.table-container > tr > td {
+  text-align: center;
+}
+
+.create-test-container {
+  width: 85%;
+  border: 1px solid;
+  margin: auto;
+  margin-top: 15px;
+  padding: 25px;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+}
+
+.create-test-heading {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.flex-container {
+  margin-top: 15x;
+  display: flex;
+  justify-content: space-between;
+}
+
+.create-test-btn {
+  margin-top: 20px;
+}
+
+.result-message {
+  text-align: center;
+  margin-top: 25px;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 24px;
+}
