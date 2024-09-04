@@ -56,8 +56,10 @@ function Login() {
 
         if (userType === "Admin") {
           navigate("/admin");
+          window.location.reload();
         } else {
           navigate("/user");
+          window.location.reload();
         }
       }
     } catch (error) {
