@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Admin from "./pages/Admin";
 import Login from "./pages/Login";
@@ -12,6 +12,8 @@ import AttemptedTests from "./pages/AttemptedTests";
 import GiveTest from "./pages/GiveTest";
 
 function App() {
+  const type = localStorage.getItem("type");
+
   return (
     <>
       <div>
@@ -19,15 +21,36 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/user" element={<User />} />
-          <Route path="/admin/viewQuestions" element={<ViewQuestions />} />
-          <Route path="/admin/createTest" element={<CreateTest />} />
-          <Route path="/admin/viewResults" element={<ViewResults />} />
+          <Route
+            path="/admin"
+            element={type === "Admin" ? <Admin /> : <Login />}
+          />
 
-          <Route path="/user" element={<User />} />
-          <Route path="/user/attemptedTests" element={<AttemptedTests />} />
-          <Route path="/user/giveTest" element={<GiveTest />} />
+          <Route
+            path="/admin/viewQuestions"
+            element={type === "Admin" ? <ViewQuestions /> : <Login />}
+          />
+          <Route
+            path="/admin/createTest"
+            element={type === "Admin" ? <CreateTest /> : <Login />}
+          />
+          <Route
+            path="/admin/viewResults"
+            element={type === "Admin" ? <ViewResults /> : <Login />}
+          />
+
+          <Route
+            path="/user"
+            element={type === "User" ? <User /> : <Login />}
+          />
+          <Route
+            path="/user/attemptedTests"
+            element={type === "User" ? <AttemptedTests /> : <Login />}
+          />
+          <Route
+            path="/user/giveTest"
+            element={type === "User" ? <GiveTest /> : <Login />}
+          />
         </Routes>
       </div>
     </>

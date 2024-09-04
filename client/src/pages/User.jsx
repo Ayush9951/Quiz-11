@@ -42,7 +42,7 @@ function User() {
         if (data.success == false) {
           toast.error(data.message);
         } else if (data.success == true) {
-          // need to check if user already given test or not
+          // checking if user already given test or not
           const { data } = await axios.post(
             "/api/v1/results/check-test-attempt",
             {
@@ -55,6 +55,7 @@ function User() {
             toast.error(data.message);
           } else if (data.success == true) {
             navigate("/user/giveTest");
+            localStorage.setItem("testKey", key);
           }
         }
       } catch (error) {

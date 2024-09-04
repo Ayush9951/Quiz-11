@@ -48,7 +48,7 @@ function AttemptedTests() {
                   <tr key={index}>
                     <td>{index + 1}.</td>
                     <td>{result.title}</td>
-                    <td>{result.marks}</td>
+                    <td>{result.marks} %</td>
                     <td>{result.submittedAt}</td>
                   </tr>
                 );

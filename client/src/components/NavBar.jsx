@@ -22,6 +22,12 @@ function NavBar(props) {
     navigate("/admin/createTest");
   };
 
+  const handleLogout = () => {
+    localStorage.clear();
+
+    navigate("/");
+  };
+
   return (
     <>
       <Navbar bg="primary" data-bs-theme="dark">
@@ -38,7 +44,9 @@ function NavBar(props) {
             </Nav.Link>
             <Nav.Link onClick={handleOpenCreateTestPage}>Create Test</Nav.Link>
           </Nav>
-          <Button variant="light">Logout</Button>
+          <Button variant="light" onClick={handleLogout}>
+            Logout
+          </Button>
         </Container>
       </Navbar>
     </>

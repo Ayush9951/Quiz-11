@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 
 import Logo from "../images/login.png";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Modal from "react-bootstrap/Modal";
@@ -47,14 +47,18 @@ function Login() {
       } else {
         toast.success(data.message);
 
-        setTimeout(() => {
-          if (data.user.email === "admin@gmail.com") {
-            navigate("/admin");
-          } else {
-            navigate("/user");
-            localStorage.setItem("email", data.user.email);
-          }
-        }, 1000);
+        localStorage.setItem("name", data.user.name);
+        localStorage.setItem("email", data.user.email);
+        localStorage.setItem("type", data.user.type);
+
+        // Navigate immediately after setting localStorage
+        const userType = data.user.type;
+
+        if (userType === "Admin") {
+          navigate("/admin");
+        } else {
+          navigate("/user");
+        }
       }
     } catch (error) {
       console.log(error);

@@ -16,6 +16,12 @@ function UserNavBar() {
     navigate("/user/attemptedTests");
   };
 
+  const handleLogout = () => {
+    localStorage.clear();
+
+    navigate("/");
+  };
+
   return (
     <div>
       <Navbar bg="dark" data-bs-theme="dark">
@@ -26,7 +32,9 @@ function UserNavBar() {
             <Nav.Link onClick={handleAttemptedTests}>Test Attempts</Nav.Link>
           </Nav>
         </Container>
-        <Button variant="light">Logout</Button>
+        <Button variant="light" onClick={handleLogout}>
+          Logout
+        </Button>
       </Navbar>
     </div>
   );
