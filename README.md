@@ -35,3 +35,27 @@ It is a full stack application created using MERN stack.
 
 **Database:** MongoDB 
 
+
+## Screenshots
+
+Login Page
+
+![App Screenshot](https://i.postimg.cc/VN8ytNQx/Screenshot-2024-09-06-223035.png)
+
+Admin Dashboard
+
+![App Screenshot](https://i.postimg.cc/fbm8x7jC/Screenshot-2024-09-06-223157.png)
+
+View Questions
+
+![App Screenshot](https://i.postimg.cc/5016szDb/Screenshot-2024-09-06-223353.png)
+
+Create a Quiz
+
+![App Screenshot](https://i.postimg.cc/c4Q1bCMJ/Screenshot-2024-09-06-223455.png)
+
+User Dashboard
+
+![App Screenshot](https://i.postimg.cc/sXh1fcSY/Screenshot-2024-09-06-223613.png)
+
+
